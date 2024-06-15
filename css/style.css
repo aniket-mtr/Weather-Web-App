@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    /* background-color: #d7d7d7; */
+    color: black;
+    background-image: url('../utility_images/clouds-bg2.jpg');
+}
+.headContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+    min-height: 2em;
+    background-color: rgb(20, 16, 134);
+    color: white;
+    height: 15vh;
+}
+#heading{
+    font-size: 2em;
+    margin-left: 20vw;
+}
+#side-text{
+    justify-self: right;
+    margin-top: 8vh;
+    font-size: 1.25em;
+}
+.input{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.input p{
+    font-size: larger;
+    font-weight: bold;
+}
+.output{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin-top: 7vh;
+}
+.weather-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e5f75f;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1px;
+    margin: 3px;
+    width: 12vw;
+    height: 30vh;
+    background-color: #e8de53;
+}
+
+/* Styles for the weather image */
+.weather-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 13vh; 
+    width: 12vw; /* Adjust the width as needed */
+    margin-bottom: 10px;
+}
+
+/* Styles for the weather information */
+.weather-info {
+    text-align: center;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.weather-info p {
+    margin: 5px 0;
+}
+
+#loader {
+    font-size: 40px;
+    color: #000;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
