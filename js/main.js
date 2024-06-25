@@ -39,12 +39,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     cityList.addEventListener("change", () => {
-        const loader = document.getElementById('loader');
-        if(loader)
-            {
-                loader.classList.remove('hide');
-                loader.classList.add('show');
-            }
+
+        let output = document.querySelector('.output')
+        output.innerHTML = "" //clear screen
+
+        //create and append loader
+        var loader = document.createElement('div')
+        loader.innerHTML = "Loading data, please wait..."
+        loader.style.fontSize = '40px'
+        loader.style.color = '#000'
+        loader.style.fontWeight = 'bold'
+        
+        output.appendChild(loader)
 
         let new_city_name = cityList.value;
         // Search for city_name in the data array
@@ -53,11 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
             (async () => {
                 let api_string = `https://www.7timer.info/bin/api.pl?lon=${result.longitude}&lat=${result.latitude}&product=civil&output=json`;
                 let api_data = await getAPI(api_string);
-                if(loader)
-                    {
-                        loader.classList.remove('show');
-                        loader.classList.add('hide');
-                    }
+
+                output.removeChild(loader) //remove the loader
+
                 if (api_data) {
                     processData(api_data);
                 } else {

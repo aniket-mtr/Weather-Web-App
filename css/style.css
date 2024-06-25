@@ -80,14 +80,3 @@ body {
 .weather-info p {
     margin: 5px 0;
 }
-
-#loader {
-    font-size: 40px;
-    color: #000;
-}
-.hide{
-    display: none;
-}
-.show{
-    display: block;
-}
