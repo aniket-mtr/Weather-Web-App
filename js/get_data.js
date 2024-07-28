@@ -24,6 +24,6 @@ async function getData() {
     // console.log(result)
     module.exports = result
     result = JSON.stringify(result)
-    fs.appendFileSync('../city_data.txt', result)
+    fs.writeFileSync('../city_data.txt', result)
 })()
 
